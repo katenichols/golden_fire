@@ -1,0 +1,44 @@
+.nav {
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__list-item {
+  margin-right: 25px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.nav__list-link {
+  @include font-group-bold($size-20, $line-150);
+  color: $color-default-white;
+
+  &:hover {
+    color: $color-energy-yellow;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $color-energy-yellow-fade;
+  }
+}
+
+.nav__list-link--dark {
+  color: $color-midnight-express;
+
+  &:hover {
+    color: $color-supernova;
+  }
+
+  &:active {
+    color: $color-supernova-fade;
+  }
+}

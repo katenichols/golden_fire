@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  width: 47px;
+  margin-right: 35px;
+
+  @media (max-width: $vp-768) {
+    margin-right: 0;
+  }
+}

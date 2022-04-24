@@ -1,0 +1,111 @@
+@mixin retina {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin font-group($size, $height) {
+  font-family: "OpenSans", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+}
+
+@mixin font-group-semibold($size, $height) {
+  font-family: "OpenSans Semibold", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 600;
+}
+
+@mixin font-group-bold($size, $height) {
+  font-family: "OpenSans Bold", "Trebuchet MS", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+}
+
+@mixin font-group-small($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
+// Desktop first
+
+// @mixin vp-1159 {
+//   @media (max-width: $vp-1160 - 1) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1023 {
+//   @media (max-width: $vp-1024 - 1) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-767 {
+//   @media (max-width: $vp-768 - 1) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-479 {
+//   @media (max-width: $vp-480 - 1) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-415 {
+//   @media (max-width: $vp-416 - 1) {
+//     @content;
+//   }
+// }
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

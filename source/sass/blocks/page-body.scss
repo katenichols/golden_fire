@@ -1,0 +1,7 @@
+.page-body {
+  background-color: $color-default-white;
+
+  &--dark {
+    background-color: $color-midnight-express;
+  }
+}

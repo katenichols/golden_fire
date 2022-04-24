@@ -1,0 +1,10 @@
+.page-main {
+  &--blank {
+    width: 1000px;
+    margin: 200px auto 0 auto;
+    text-align: center;
+
+    @include font-group-bold($size-46, $line-150);
+    color: $color-midnight-express;
+  }
+}
