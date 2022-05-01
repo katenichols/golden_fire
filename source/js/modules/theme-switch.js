@@ -1,10 +1,10 @@
+import {pageHeaderButton} from './on-page-header-button-click';
 const DARKMODIFIER = '--dark';
 
 export const pageBody = document.querySelector('.page-body');
 export const pageHeader = pageBody.querySelector('.page-header');
 export const navListLinks = pageBody.querySelectorAll('.nav__list-link');
 export const switchLabel = pageBody.querySelector('.page-header__switch-label');
-export const pageHeaderButton = pageBody.querySelector('.page-header__button');
 
 let navLinks = Array.from(navListLinks);
 

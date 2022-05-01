@@ -664,6 +664,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.page-header--dark > .page-header__overlay--opened {
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -688,6 +693,10 @@ ul {
 .page-header__picture {
   width: 47px;
   height: 90px;
+}
+
+.page-header__wrapper--opened > .page-header__picture {
+  margin-bottom: 20px;
 }
 
 .page-header__button {
@@ -794,6 +803,10 @@ ul {
   margin-right: 0;
 }
 
+.nav--opened .nav__list-item {
+  width: 100%;
+}
+
 .nav__list-link {
   font-family: "OpenSans Bold", "Trebuchet MS", "Helvetica", sans-serif;
   font-style: normal;
@@ -810,6 +823,18 @@ ul {
 
 .nav__list-link:active {
   color: rgba(255, 251, 75, 0.3);
+}
+
+.nav--opened .nav__list-link {
+  color: #192144;
+}
+
+.nav--opened .nav__list-link:hover {
+  color: #ffd74b;
+}
+
+.nav--opened .nav__list-link:active {
+  color: rgba(22, 28, 53, 0.5);
 }
 
 .nav__list-link--dark {
@@ -847,7 +872,7 @@ ul {
 
   .page-header__overlay--opened {
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -858,8 +883,10 @@ ul {
   }
 
   .page-header__wrapper {
-    -ms-grid-columns: 1fr 34px;
-    grid-template-columns: 1fr 34px;
+    -ms-grid-columns: 1fr 37px;
+    grid-template-columns: 1fr 37px;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
@@ -870,10 +897,16 @@ ul {
   }
 
   .page-header__wrapper--opened {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 66px (1fr)[2];
-    grid-template-rows: 66px repeat(2, 1fr);
+    position: absolute;
+    top: 0;
+    right: 0;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -ms-grid-rows: 86px (auto)[2];
+    grid-template-rows: 86px repeat(2, auto);
+    width: 320px;
+    padding: 30px 30px 40px 40px;
+    background-color: #ffffff;
   }
 
   .page-header__picture {
@@ -891,6 +924,10 @@ ul {
     background-color: rgba(255, 255, 255, 0);
     overflow: hidden;
     border: none;
+  }
+
+  .page-header__button:hover {
+    cursor: pointer;
   }
 
   .page-header__button::before {
@@ -913,6 +950,9 @@ ul {
   }
 
   .page-header__button--opened {
+    position: absolute;
+    top: 50px;
+    right: 30px;
     width: 24px;
     height: 24px;
   }
@@ -932,12 +972,21 @@ ul {
     display: none;
   }
 
+  .page-header__switch--opened {
+    display: block;
+  }
+
   .page-header__link {
     display: none;
   }
 
   .nav {
     display: none;
+  }
+
+  .nav--opened {
+    display: block;
+    margin-bottom: 40px;
   }
 }
 

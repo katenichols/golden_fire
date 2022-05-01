@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/theme-switch';
+import {pageHeaderButton, onPageHeaderButtonClick} from './modules/on-page-header-button-click';
 
 export const lastFocus = document.activeElement;
 // ---------------------------------
@@ -21,6 +22,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+
+    pageHeaderButton.addEventListener('click', () => {
+      onPageHeaderButtonClick();
+    });
   });
 });
 

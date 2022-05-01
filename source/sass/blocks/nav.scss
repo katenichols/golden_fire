@@ -1,6 +1,11 @@
 .nav {
   @media (max-width: $vp-1023) {
     display: none;
+
+    &--opened {
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -17,6 +22,10 @@
   }
 }
 
+.nav--opened .nav__list-item {
+  width: 100%;
+}
+
 .nav__list-link {
   @include font-group-bold($size-20, $line-150);
   color: $color-default-white;
@@ -28,6 +37,18 @@
 
   &:active {
     color: $color-energy-yellow-fade;
+  }
+}
+
+.nav--opened .nav__list-link {
+  color: $color-midnight-express;
+
+  &:hover {
+    color: $color-energy-yellow;
+  }
+
+  &:active {
+    color: $color-header-overlay;
   }
 }
 
