@@ -206,6 +206,13 @@
   }
 }
 
+.page-header__wrapper--opened .page-header__link {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .page-header__switch-label {
   position: relative;
   display: block;
@@ -240,4 +247,8 @@
     background-repeat: no-repeat;
     background-color: $color-supernova;
   }
+}
+
+.page-header__switch--opened .page-header__switch-label {
+  color: $color-midnight-express;
 }
