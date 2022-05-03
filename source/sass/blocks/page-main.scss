@@ -8,3 +8,10 @@
     color: $color-midnight-express;
   }
 }
+
+.page-main__conf-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}

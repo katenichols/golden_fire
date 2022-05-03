@@ -1,0 +1,16 @@
+.conferences {
+  display: block;
+
+  width: calc(50% - 20px);
+  padding: 20px 25px 29px;
+}
+
+.conferences__title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  margin-left: 33px;
+
+  @include font-group-bold($size-24, $line-150);
+  color: $color-neon-carrot;
+  text-transform: uppercase;
+}

@@ -4,6 +4,7 @@ const pageHeaderOverlay = document.querySelector('.page-header__overlay');
 const pageHeaderWrapper = document.querySelector('.page-header__wrapper');
 const nav = pageHeaderWrapper.querySelector('.nav');
 const pageHeaderSwitch = pageHeaderWrapper.querySelector('.page-header__switch');
+const mainScreen = document.querySelector('.main-screen');
 
 export const onPageHeaderButtonClick = () => {
   if (pageHeaderButton.classList.contains('page-header__button--opened')) {
@@ -12,11 +13,13 @@ export const onPageHeaderButtonClick = () => {
     pageHeaderWrapper.classList.remove('page-header__wrapper--opened');
     nav.classList.remove('nav--opened');
     pageHeaderSwitch.classList.remove('page-header__switch--opened');
+    mainScreen.classList.remove('main-screen--opened');
   } else {
     pageHeaderButton.classList.add('page-header__button--opened');
     pageHeaderOverlay.classList.add('page-header__overlay--opened');
     pageHeaderWrapper.classList.add('page-header__wrapper--opened');
     nav.classList.add('nav--opened');
     pageHeaderSwitch.classList.add('page-header__switch--opened');
+    mainScreen.classList.add('main-screen--opened');
   }
 };
