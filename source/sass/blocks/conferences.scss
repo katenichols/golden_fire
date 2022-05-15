@@ -1,16 +1,51 @@
 .conferences {
-  display: block;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   width: calc(50% - 20px);
   padding: 20px 25px 29px;
+
+  background-color: $color-white-smoke;
+  border-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 20px 35px 29px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 20px;
+    padding: 16px 15px;
+
+    border-radius: 0;
+  }
 }
 
 .conferences__title {
+  position: absolute;
+  top: 20px;
+  left: 58px;
   margin-top: 0;
-  margin-bottom: 21px;
-  margin-left: 33px;
+  margin-bottom: 0;
 
   @include font-group-bold($size-24, $line-150);
   color: $color-neon-carrot;
   text-transform: uppercase;
+
+  @media (max-width: $vp-1023) {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 16px;
+  }
 }

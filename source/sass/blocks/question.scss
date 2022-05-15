@@ -1,0 +1,15 @@
+.question {
+  display: block;
+  width: 30.5%;
+
+  background-color: $color-white-smoke;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

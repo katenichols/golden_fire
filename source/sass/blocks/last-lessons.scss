@@ -1,0 +1,16 @@
+.last-lessons {
+  display: block;
+  width: 69.5%;
+
+  background-color: $color-white-smoke;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+    margin-bottom: 65px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

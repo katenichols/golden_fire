@@ -1,0 +1,17 @@
+.languages {
+  width: 69.5%;
+
+  color: $color-white-smoke;
+
+  background-color: $color-midnight-express;
+  border-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+    margin-bottom: 65px;
+  }
+}
+
+.page-body--dark .languages {
+  border: 3px solid $color-white-smoke;
+}

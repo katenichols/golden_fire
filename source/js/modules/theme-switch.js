@@ -5,6 +5,7 @@ export const pageBody = document.querySelector('.page-body');
 export const pageHeader = pageBody.querySelector('.page-header');
 export const navListLinks = pageBody.querySelectorAll('.nav__list-link');
 export const switchLabel = pageBody.querySelector('.page-header__switch-label');
+const footer = pageBody.querySelector('.footer');
 const mainScreenWrapper = pageBody.querySelector('.main-screen__wrapper');
 
 let navLinks = Array.from(navListLinks);
@@ -18,6 +19,7 @@ export const themeToggle = (arr) => {
     arr.forEach((el) => {
       el.classList.remove(`nav__list-link${DARKMODIFIER}`);
     });
+    footer.classList.remove(`footer${DARKMODIFIER}`);
     mainScreenWrapper.classList.remove(`main-screen__wrapper${DARKMODIFIER}`);
   } else {
     pageBody.classList.add(`page-body${DARKMODIFIER}`);
@@ -27,6 +29,7 @@ export const themeToggle = (arr) => {
     arr.forEach((el) => {
       el.classList.add(`nav__list-link${DARKMODIFIER}`);
     });
+    footer.classList.add(`footer${DARKMODIFIER}`);
     mainScreenWrapper.classList.add(`main-screen__wrapper${DARKMODIFIER}`);
   }
 };

@@ -1,0 +1,12 @@
+.art {
+  display: block;
+  width: 311px;
+  min-height: 449px;
+
+  background-color: $color-supernova;
+  border-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+  }
+}

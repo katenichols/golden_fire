@@ -1,0 +1,50 @@
+.new {
+  display: block;
+  width: calc(50% - 15px);
+  padding: 9px 8px;
+
+  border-radius: 5px;
+
+  background-color: $color-transparent;
+
+  &:hover {
+    background-color: $color-new-hover;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    padding: 12px 15px;
+
+    border-radius: 0;
+
+    &:first-of-type {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.new__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  @include font-group-semibold($size-16, $line-115);
+  color: $color-midnight-express;
+
+  @media (max-width: $vp-767) {
+    font-size: 14px;
+  }
+}
+
+.new:hover .new__title {
+  color: $color-warning;
+}
+
+.new__text {
+  margin: 0;
+
+  @include font-group($size-14, $line-115);
+
+  @media (max-width: $vp-767) {
+    font-size: 12px;
+  }
+}

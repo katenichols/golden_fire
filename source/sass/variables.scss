@@ -8,9 +8,10 @@ $color-default-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
-// для нейминга цветов используем https://www.htmlcsscolor.com/hex/161c35
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/dc143c
 
 $color-midnight-express: #192144;
+$color-midnight-express-fade: rgba(25, 33, 68, 0.2);
 $color-burnt-orange: #f26926;
 $color-neon-carrot: #ff8d30;
 $color-supernova: #ffbd30;
@@ -21,7 +22,8 @@ $color-midnight-blue: #132576;
 $color-lavender: #e2e5f2;
 $color-white-smoke: #f6f6f6;
 $color-charcoal: #444444;
-$color-error: #dc143c;
+$color-warning: #dc143c;
+$color-new-hover: rgba(220, 20, 60, 0.1);
 $color-header-overlay: rgba(22, 28, 53, 0.5);
 
 // Gradient
@@ -87,7 +89,8 @@ $size-40: 46px;
 $size-46: 46px;
 // ---------------------------------
 $auto: 1.22;
-$line-10: 12px;
+$line-12: 12px;
+$line-16: 16px;
 $line-24: 24px;
 $line-115: 115%;
 $line-130: 130%;
