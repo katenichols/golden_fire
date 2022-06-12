@@ -1,11 +1,51 @@
-.page-main {
-  &--blank {
-    width: 1000px;
-    margin: 200px auto 0 auto;
-    text-align: center;
+.page-main--blank {
+  width: 100%;
+  margin: 150px auto 0 auto;
+  text-align: center;
 
-    @include font-group-bold($size-46, $line-150);
-    color: $color-midnight-express;
+  @include font-group-bold($size-46, $line-150);
+  color: $color-midnight-express;
+
+  @media (max-width: $vp-767) {
+    margin-top: 110px;
+  }
+}
+
+.page-main--blank p {
+  margin-top: 0;
+  margin-bottom: 70px;
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 40px;
+
+    font-size: 24px;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+}
+
+.page-main--blank a {
+  padding: 15px 50px;
+
+  @include font-group-semibold($size-40, $line-115);
+  color: $color-midnight-express;
+
+  background-color: $color-energy-yellow;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $color-supernova;
+  }
+
+  &:active {
+    color: $color-midnight-express-fade;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 10px 30px;
+
+    font-size: 24px;
+    text-transform: uppercase;
   }
 }
 
@@ -18,31 +58,11 @@
 
   @media (max-width: $vp-1023) {
     flex-direction: column;
+    margin-bottom: 40px;
   }
-}
 
-.page-main__languages-art {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  margin-bottom: 65px;
-
-  @media (max-width: $vp-1023) {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-
-.page-main__lessons-form {
-  display: flex;
-  margin-bottom: 65px;
-
-  border-radius: 15px;
-
-  @media (max-width: $vp-1023) {
-    flex-direction: column;
-
-    border-radius: 0;
+  @media (max-width: $vp-767) {
+    margin-bottom: 22px;
   }
 }
 

@@ -51,12 +51,13 @@
 
 .news__link {
   display: block;
-  width: 120px;
+  width: 150px;
   margin-right: 0;
   margin-left: auto;
   padding: 10px 15px 9px;
+  text-align: center;
 
-  @include font-group-semibold($size-12, $line-12);
+  @include font-group-semibold($size-14, $line-16);
   color: $color-midnight-express;
   text-transform: uppercase;
 

@@ -1,5 +1,10 @@
+
 .languages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 69.5%;
+  padding: 40px 56px;
 
   color: $color-white-smoke;
 
@@ -8,10 +13,73 @@
 
   @media (max-width: $vp-1023) {
     width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 20px;
+    padding: 30px 25px;
+    border-radius: 0;
   }
 }
 
-.page-body--dark .languages {
+.js-languages--dark {
   border: 3px solid $color-white-smoke;
+
+  @media (max-width: $vp-767) {
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.languages h2 {
+  margin-top: 0;
+  margin-bottom: 26px;
+
+  @include font-group-semibold($size-20, $line-24);
+  color: $color-supernova;
+  text-transform: uppercase;
+}
+
+.languages p {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  @include font-group($size-18, $line-130);
+  color: $color-white-smoke;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 14px;
+  }
+}
+
+.languages a {
+  width: 100%;
+  padding: 15px 25px;
+  text-align: center;
+
+  @include font-group-semibold($size-20, $line-24);
+  text-transform: uppercase;
+  color: $color-midnight-blue;
+
+  background-color: $color-energy-yellow;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $color-supernova;
+  }
+
+  &:active {
+    color: $color-midnight-express-fade;
+
+    background-color: $color-supernova;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 10px 15px;
+  }
 }

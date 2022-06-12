@@ -1,25 +1,11 @@
-export const pageHeaderButton = document.querySelector('.page-header__button');
-
-const pageHeaderOverlay = document.querySelector('.page-header__overlay');
-const pageHeaderWrapper = document.querySelector('.page-header__wrapper');
-const nav = pageHeaderWrapper.querySelector('.nav');
-const pageHeaderSwitch = pageHeaderWrapper.querySelector('.page-header__switch');
-const mainScreen = document.querySelector('.main-screen');
+import {JSPREFIX, pageHeaderButton, pageHeaderOverlay, pageHeaderWrapper, nav, pageHeaderSwitch, mainScreen} from '../main';
+export const OPENEDMODIFIER = '--opened';
 
 export const onPageHeaderButtonClick = () => {
-  if (pageHeaderButton.classList.contains('page-header__button--opened')) {
-    pageHeaderButton.classList.remove('page-header__button--opened');
-    pageHeaderOverlay.classList.remove('page-header__overlay--opened');
-    pageHeaderWrapper.classList.remove('page-header__wrapper--opened');
-    nav.classList.remove('nav--opened');
-    pageHeaderSwitch.classList.remove('page-header__switch--opened');
-    mainScreen.classList.remove('main-screen--opened');
-  } else {
-    pageHeaderButton.classList.add('page-header__button--opened');
-    pageHeaderOverlay.classList.add('page-header__overlay--opened');
-    pageHeaderWrapper.classList.add('page-header__wrapper--opened');
-    nav.classList.add('nav--opened');
-    pageHeaderSwitch.classList.add('page-header__switch--opened');
-    mainScreen.classList.add('main-screen--opened');
-  }
+  pageHeaderButton.classList.toggle(`${JSPREFIX}page-header__button${OPENEDMODIFIER}`);
+  pageHeaderOverlay.classList.toggle(`${JSPREFIX}page-header__overlay${OPENEDMODIFIER}`);
+  pageHeaderWrapper.classList.toggle(`${JSPREFIX}page-header__wrapper${OPENEDMODIFIER}`);
+  nav.classList.toggle(`${JSPREFIX}nav${OPENEDMODIFIER}`);
+  pageHeaderSwitch.classList.toggle(`${JSPREFIX}page-header__switch${OPENEDMODIFIER}`);
+  mainScreen.classList.toggle(`${JSPREFIX}main-screen${OPENEDMODIFIER}`);
 };

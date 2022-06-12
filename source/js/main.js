@@ -1,9 +1,23 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/theme-switch';
-import {pageHeaderButton, onPageHeaderButtonClick} from './modules/on-page-header-button-click';
+import {onPageHeaderButtonClick} from './modules/on-page-header-button-click';
+import {closeModal} from './modules/close-modal';
+import {escKey} from './utils/esc-key';
 
-export const lastFocus = document.activeElement;
+export const JSPREFIX = 'js-';
+
+export const pageHeaderButton = document.querySelector('.page-header__button');
+export const pageHeaderOverlay = document.querySelector('.page-header__overlay');
+export const pageHeaderWrapper = document.querySelector('.page-header__wrapper');
+export const nav = pageHeaderWrapper.querySelector('.nav');
+export const pageHeaderSwitch = pageHeaderWrapper.querySelector('.page-header__switch');
+export const mainScreen = document.querySelector('.main-screen');
+export const focusables = pageHeaderWrapper.querySelectorAll('.page-header__button, .nav__list-link, .page-header__link, .page-header__switch');
+const firstFocusable = focusables[0];
+const lastFocusable = focusables[focusables.length - 1];
+
+const lastFocus = document.activeElement;
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,8 +35,46 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
 
-    pageHeaderButton.addEventListener('click', () => {
-      onPageHeaderButtonClick();
+    const onEscKeydown = (evt) => {
+      if (escKey(evt)) {
+        closeModal();
+        return;
+      }
+    };
+
+    const focusTrap = (evt) => {
+      if (pageHeaderWrapper.classList.contains('is-open')) {
+        if (evt.key === 'Tab') {
+          if (evt.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              evt.preventDefault();
+              lastFocusable.focus();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              evt.preventDefault();
+              firstFocusable.focus();
+            }
+          }
+        }
+      }
+    };
+
+    if (document.body.contains(pageHeaderButton)) {
+      pageHeaderButton.addEventListener('click', () => {
+        onPageHeaderButtonClick();
+      });
+    }
+
+    document.addEventListener('click', (evt) => {
+      if (evt.target === pageHeaderOverlay) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (evt) => {
+      focusTrap(evt);
+      onEscKeydown(evt);
     });
   });
 });

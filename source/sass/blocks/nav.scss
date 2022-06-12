@@ -9,6 +9,13 @@
   }
 }
 
+.js-nav--opened {
+  @media (max-width: $vp-1023) {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +29,7 @@
   }
 }
 
-.nav--opened .nav__list-item {
+.js-nav--opened .nav__list-item {
   width: 100%;
 }
 
@@ -40,7 +47,7 @@
   }
 }
 
-.nav--opened .nav__list-link {
+.js-nav--opened .nav__list-link {
   color: $color-midnight-express;
 
   &:hover {
@@ -52,7 +59,7 @@
   }
 }
 
-.nav__list-link--dark {
+.js-nav__list-link--dark {
   color: $color-midnight-express;
 
   &:hover {

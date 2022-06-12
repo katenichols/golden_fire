@@ -1,12 +1,89 @@
 .art {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 311px;
-  min-height: 449px;
+  padding: 30px 36px;
 
   background-color: $color-supernova;
   border-radius: 15px;
 
   @media (max-width: $vp-1023) {
     width: 100%;
+  }
+
+  @media (max-width: $vp-767) {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    padding: 20px;
+  }
+
+  @media (max-width: 415px) {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+  }
+}
+
+.art__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+
+  @include font-group-bold($size-24, $line-150);
+  color: $color-midnight-blue;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.art__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin: 0 auto 10px;
+
+  @media (max-width: $vp-1023) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 0 50px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+}
+
+.art__link {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  text-align: center;
+
+  @include font-group-semibold($size-14, $line-16);
+  text-transform: uppercase;
+  color: $color-midnight-blue;
+
+  background-color: $color-default-white;
+  border-radius: 10px;
+
+  @media (max-width: $vp-1023) {
+    width: 250px;
+    margin: 0 auto;
+    padding: 15px 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 233px;
   }
 }

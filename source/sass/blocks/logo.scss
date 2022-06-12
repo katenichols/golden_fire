@@ -1,9 +1,16 @@
 .logo {
   display: block;
   width: 47px;
-  margin-right: 35px;
 
-  @media (max-width: $vp-768) {
-    margin-right: 0;
+  @media (max-width: $vp-1023) {
+    width: 34px;
   }
+
+  @media (max-width: $vp-767) {
+    width: 23px;
+  }
+}
+
+.page-header__logo-link:hover .logo {
+  box-shadow: 0 8px 8px -4px $color-supernova;
 }

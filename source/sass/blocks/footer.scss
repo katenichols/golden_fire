@@ -1,9 +1,9 @@
 .footer {
   background-color: $color-midnight-express;
+}
 
-  &--dark {
-    background-color: $color-white-smoke;
-  }
+.js-footer--dark {
+  background-color: $color-white-smoke;
 }
 
 .footer__wrapper {
@@ -98,8 +98,8 @@
   }
 }
 
-.footer--dark .footer__dev-copyright,
-.footer--dark .footer__dev-text {
+.js-footer--dark .footer__dev-copyright,
+.js-footer--dark .footer__dev-text {
   color: $color-midnight-express;
 }
 

@@ -6,19 +6,6 @@
   margin: 0 auto;
   padding: 0 110px;
 
-  //   @include vp-1023 {
-  //     padding: 0 45px;
-  //   }
-
-  //   @include vp-767 {
-  //     padding: 0 33px;
-  //   }
-
-  //   @include vp-415 {
-  //     padding: 0 15px;
-  //   }
-  // }
-
   @media (max-width: 1023px) {
     padding: 0 45px;
   }
@@ -46,4 +33,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $vp-767) {
+    min-height: 65px;
+  }
+}
+
+.container--languages-art {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 65px;
+
+  @media (max-width: $vp-1023) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0;
+  }
+
+  @media (max-width: 415px) {
+    padding: 0;
+  }
+}
+
+.container--lessons-form {
+  display: flex;
+  margin-bottom: 65px;
+
+  border-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    flex-direction: column;
+
+    border-radius: 0;
+  }
 }

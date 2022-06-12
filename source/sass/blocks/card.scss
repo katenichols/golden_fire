@@ -1,0 +1,50 @@
+.card {
+  margin: 0 auto;
+  text-align: center;
+
+  &:last-of-type {
+    display: none;
+  }
+
+  @media (max-width: $vp-1023) {
+    &:last-of-type {
+      display: block;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    &:last-of-type {
+      display: none;
+    }
+  }
+}
+
+.card__image {
+  width: 184px;
+  height: 245px;
+  margin: 0 auto 6px;
+
+  background-image: url("../../img/content/creativity1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+
+  @media (max-resolution: 2dppx) {
+    background-image: url("../../img/content/creativity1@2x.jpg");
+  }
+}
+
+.card:nth-of-type(even) .card__image {
+  background-image: url("../../img/content/creativity2.jpg");
+
+  @media (max-resolution: 2dppx) {
+    background-image: url("../../img/content/creativity2@2x.jpg");
+  }
+}
+
+.card__text {
+  text-align: center;
+
+  @include font-group-semibold($size-12, $line-150);
+  color: $color-charcoal;
+}
