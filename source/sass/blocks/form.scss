@@ -1,0 +1,58 @@
+.form {
+  width: 281px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: $vp-767) {
+    width: auto;
+    max-width: 281px;
+    min-width: 273px;
+    padding: 0 15px;
+  }
+}
+
+.form__wrapper {
+  margin-bottom: 15px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 6px 10px;
+
+  @include font-group($size-14, $line-115);
+  color: $color-default-black;
+
+  border: none;
+
+  &::placeholder {
+    font-size: 12px;
+    color: $color-charcoal;
+  }
+}
+
+.form textarea {
+  height: 107px;
+  user-select: none;
+}
+
+.form__submit {
+  width: 100%;
+  padding: 10px 35px 12px;
+
+  @include font-group-semibold($size-14, $line-115);
+  text-transform: uppercase;
+  color: $color-midnight-express;
+
+  background-color: $color-energy-yellow;
+  border: none;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $color-supernova;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $color-midnight-express-fade;
+  }
+}

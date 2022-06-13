@@ -8,8 +8,45 @@
 
   @media (max-width: $vp-1023) {
     width: 100%;
+    padding-bottom: 40px;
 
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-bottom: 24px;
+  }
+}
+
+.question__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding: 12px 0;
+  text-align: center;
+
+  @include font-group-bold($size-24, $line-150);
+  text-transform: uppercase;
+  color: $color-neon-carrot;
+
+  background-color: $color-midnight-express;
+
+  border-top-right-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    border-top-left-radius: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
+  }
+}
+
+.js-page-body--dark .question__title {
+  border-top: 3px solid $color-white-smoke;
+  border-right: 3px solid $color-white-smoke;
+
+  @media (max-width: $vp-1023) {
+    border-left: 3px solid $color-white-smoke;
   }
 }

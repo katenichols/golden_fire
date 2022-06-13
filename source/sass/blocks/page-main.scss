@@ -62,14 +62,6 @@
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 22px;
-  }
-}
-
-.page-body--dark .page-main__lessons-form {
-  border: 3px solid $color-white-smoke;
-
-  @media (max-width: $vp-1023) {
-    border: none;
+    margin-bottom: 30px;
   }
 }

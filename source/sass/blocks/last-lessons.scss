@@ -10,7 +10,59 @@
     width: 100%;
     margin-bottom: 65px;
 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 30px;
+  }
+}
+
+.last-lessons__title {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  padding-left: 42px;
+
+  @include font-group-bold($size-24, $line-150);
+  text-transform: uppercase;
+  color: $color-neon-carrot;
+
+  background-color: $color-midnight-express;
+  border-top-left-radius: 15px;
+
+  @media (max-width: $vp-1023) {
+    border-top-right-radius: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-left: 0;
+    text-align: center;
+
+    font-size: 20px;
+  }
+}
+
+.js-page-body--dark .last-lessons__title {
+  border-top: 3px solid $color-white-smoke;
+  border-left: 3px solid $color-white-smoke;
+
+  @media (max-width: $vp-1023) {
+    border-right: 3px solid $color-white-smoke;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+}
+
+.last-lessons__main-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 22px 0 40px;
+
+  @media (max-width: $vp-767) {
+    flex-direction: column;
+    justify-content: center;
   }
 }

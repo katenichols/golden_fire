@@ -157,12 +157,16 @@
               <h2 class="art__title">Творческий раздел</h2>
               <ul class="art__list">
                 <li class="art__item card">
-                  <div class="card__image"></div>
-                  <span class="card__text">Пророческая картина</span>
+                  <a href="#">
+                    <div class="card__image"></div>
+                    <span class="card__text">Пророческая картина</span>
+                  </a>
                 </li>
                 <li class="art__item card">
-                  <div class="card__image"></div>
-                  <span class="card__text">Пророческая картина</span>
+                  <a href="#">
+                    <div class="card__image"></div>
+                    <span class="card__text">Пророческая картина</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -174,11 +178,97 @@
       <div class="page-main__lessons-form">
         <div class="container container--lessons-form">
           <section class="last-lessons">
-            <span>Раздел последних уроков</span>
+            <h2 class="last-lessons__title">Последние уроки</h2>
+            <ul class="last-lessons__main-list">
+              <li class="last-lessons__main-list-item lessons-item">
+                <a href="#" class="lessons-item__link">
+                  <!-- Якорь к разделу на странице уроков -->
+                  <h4 class="lessons-item__title">Видео</h4>
+                </a>
+                <ul class="lessons-item__list lessons">
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Видео № 15</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Видео № 14</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Видео № 13</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Видео № 12</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Видео № 11</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="last-lessons__main-list-item lessons-item">
+                <a href="#" class="lessons-item__link">
+                  <!-- Якорь к разделу на странице уроков -->
+                  <h4 class="lessons-item__title">Тексты</h4>
+                </a>
+                <ul class="lessons-item__list lessons">
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Текст № 15</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Текст № 14</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Текст № 13</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Текст № 12</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Текст № 11</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="last-lessons__main-list-item lessons-item">
+                <a href="#" class="lessons-item__link">
+                  <!-- Якорь к разделу на странице уроков -->
+                  <h4 class="lessons-item__title">Практика</h4>
+                </a>
+                <ul class="lessons-item__list lessons">
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Занятие № 15</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Занятие № 14</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Занятие № 13</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Занятие № 12</a>
+                  </li>
+                  <li class="lessons__item">
+                    <a href="#" class="lessons__link">Занятие № 11</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </section>
 
           <section class="question">
-            <span>Раздел обратной связи</span>
+            <h2 class="question__title">Задать вопрос</h2>
+            <form class="question-form form">
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" required class="form__input" placeholder="Ваше имя" autocomplete="off">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="email">Ваш email</label>
+                <input type="email" id="email" name="email" required class="form__input" placeholder="Ваш email" autocomplete="off">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="question">Ваш вопрос</label>
+                <textarea id="question" name="question" required class="form__input" placeholder="Ваш вопрос" autocomplete="off"></textarea>
+              </div>
+              <button type="submit" class="form__submit">Отправить</button>
+            </form>
           </section>
         </div>
       </div>

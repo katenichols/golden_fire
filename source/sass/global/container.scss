@@ -51,6 +51,7 @@
   }
 
   @media (max-width: $vp-767) {
+    margin-bottom: 30px;
     padding: 0;
   }
 
@@ -69,5 +70,9 @@
     flex-direction: column;
 
     border-radius: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 30px;
   }
 }

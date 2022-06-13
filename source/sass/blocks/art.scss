@@ -77,6 +77,15 @@
   background-color: $color-default-white;
   border-radius: 10px;
 
+  &:hover,
+  &:active {
+    background-color: $color-lavender;
+  }
+
+  &:active {
+    color: $color-midnight-express-fade;
+  }
+
   @media (max-width: $vp-1023) {
     width: 250px;
     margin: 0 auto;
