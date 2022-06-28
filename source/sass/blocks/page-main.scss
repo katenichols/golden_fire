@@ -65,3 +65,46 @@
     margin-bottom: 30px;
   }
 }
+
+.page-main__title-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 45px auto;
+}
+
+.page-main__title {
+  margin: 0;
+
+  @include font-group-bold($size-46, $line-150);
+  text-transform: uppercase;
+  color: $color-burnt-orange;
+  text-shadow: 0 4px 4px rgba(255, 215, 75, 0.25);
+}
+
+.page-main__text {
+  margin: 0;
+
+  @include font-group-semibold($size-24, $line-150);
+  color: $color-midnight-express;
+}
+
+.page-main__title-group
+
+.js-page-main__text--dark {
+  color: $color-default-white;
+}
+
+.page-main__pages-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include font-group-bold($size-48, $line-130);
+  color: $color-warning;
+}
+
+.js-page-main__pages-title--dark {
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+}

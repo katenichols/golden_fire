@@ -4,20 +4,22 @@ import './modules/theme-switch';
 import {onPageHeaderButtonClick} from './modules/on-page-header-button-click';
 import {closeModal} from './modules/close-modal';
 import {escKey} from './utils/esc-key';
+import {switchLabel} from './modules/theme-switch';
 
 export const JSPREFIX = 'js-';
 
+export const body = document.querySelector('.page-body');
 export const pageHeaderButton = document.querySelector('.page-header__button');
 export const pageHeaderOverlay = document.querySelector('.page-header__overlay');
 export const pageHeaderWrapper = document.querySelector('.page-header__wrapper');
 export const nav = pageHeaderWrapper.querySelector('.nav');
 export const pageHeaderSwitch = pageHeaderWrapper.querySelector('.page-header__switch');
 export const mainScreen = document.querySelector('.main-screen');
-export const focusables = pageHeaderWrapper.querySelectorAll('.page-header__button, .nav__list-link, .page-header__link, .page-header__switch');
+export const focusables = pageHeaderWrapper.querySelectorAll('.page-header__button, .nav__list-link, .page-header__link, .page-header__switch-label');
 const firstFocusable = focusables[0];
 const lastFocusable = focusables[focusables.length - 1];
 
-const lastFocus = document.activeElement;
+export const lastFocus = document.activeElement;
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -43,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const focusTrap = (evt) => {
-      if (pageHeaderWrapper.classList.contains('is-open')) {
+      if (pageHeaderWrapper.classList.contains('js-page-header__wrapper--opened')) {
         if (evt.key === 'Tab') {
           if (evt.shiftKey) {
             if (document.activeElement === firstFocusable) {

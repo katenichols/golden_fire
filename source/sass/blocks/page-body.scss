@@ -1,4 +1,6 @@
 .page-body {
+  display: grid;
+  grid-row: auto 1fr auto;
   background-color: $color-default-white;
 }
 

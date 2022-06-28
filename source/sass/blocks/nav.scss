@@ -1,18 +1,13 @@
 .nav {
   @media (max-width: $vp-1023) {
     display: none;
-
-    &--opened {
-      display: block;
-      margin-bottom: 40px;
-    }
   }
 }
 
 .js-nav--opened {
   @media (max-width: $vp-1023) {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -25,6 +20,10 @@
   margin-right: 25px;
 
   &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $vp-1023) {
     margin-right: 0;
   }
 }
@@ -44,6 +43,14 @@
 
   &:active {
     color: $color-energy-yellow-fade;
+  }
+
+  @media (max-width: $vp-1023) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 }
 
